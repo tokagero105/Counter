@@ -27,7 +27,7 @@
                                 <rect key="frame" x="38" y="405" width="143" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="-1">
+                                <buttonConfiguration key="configuration" style="filled" title="-">
                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -38,7 +38,7 @@
                                 <rect key="frame" x="216" y="405" width="143" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="+1"/>
+                                <buttonConfiguration key="configuration" style="filled" title="+"/>
                                 <connections>
                                     <action selector="plusButtonTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xqp-hJ-gtc"/>
                                 </connections>
@@ -54,6 +54,14 @@
                                     <action selector="counterResetTouch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eok-8D-xbP"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="История изменений" translatesAutoresizingMaskIntoConstraints="NO" id="BLe-Sf-Wrf">
+                                <rect key="frame" x="38" y="579" width="321" height="189"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -61,6 +69,7 @@
                     <connections>
                         <outlet property="counterLabel" destination="HCe-Yi-IGP" id="b6N-VJ-McY"/>
                         <outlet property="counterResetButton" destination="moP-Xf-1qM" id="qtS-jj-JPg"/>
+                        <outlet property="logText" destination="BLe-Sf-Wrf" id="b9x-jH-2lt"/>
                         <outlet property="minusCounterButton" destination="qmc-Te-VQy" id="fXQ-75-ddh"/>
                         <outlet property="plusCounterButton" destination="4hz-sa-cE0" id="Php-fF-jFW"/>
                     </connections>
@@ -71,6 +80,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
